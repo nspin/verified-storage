@@ -95,12 +95,6 @@ mkShell {
     pmdk
   ];
 
-  shellHook = ''
-    t() {
-      cargo build -p verus-driver --features singular && cargo run -p cargo-verus -- "$@"
-    }
-  '';
-
   passthru = {
     inherit pkgs z3 pmdk;
   };
