@@ -88,6 +88,7 @@ mkShell {
   VERUS_SINGULAR_PATH = "${pkgs.singular}/bin/Singular";
 
   nativeBuildInputs = [
+    rustPlatform.bindgenHook
     rustup
   ];
 
