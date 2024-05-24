@@ -1,2 +1,3 @@
 [toolchain]
 channel = "1.76"
+components = [ "rustc-dev", "llvm-tools" ]
