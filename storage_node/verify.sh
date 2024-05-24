@@ -2,12 +2,12 @@
 
 verus_dir=verus
 
-url="https://github.com/nspin/verus"
-branch="pr/cargo-integration"
-common_args="--git $url --branch $branch --root $out_dir"
+cargo install \
+    --git 'https://github.com/nspin/verus' \
+    --branch pr/cargo-integration \
+    --root $verus_dir \
+    cargo-verus verus-driver
 
-cargo install $common_args cargo-verus verus-driver
-
-export PATH=$(realpath $verus_dir)/bin:$PATH
+export PATH=$(cd $verus_dir && pwd)/bin:$PATH
 
 cargo verus
