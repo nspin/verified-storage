@@ -6,10 +6,15 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-builtin_macros = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
-builtin = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
-vstd = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
+# builtin_macros = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
+# builtin = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
+# vstd = { git = "https://github.com/nspin/verus.git", branch = "pr/cargo-integration" }
 deps_hack = { path = "../deps_hack" }
+
+builtin_macros = { path = "../../verus-hacking/verus/source/builtin_macros" }
+builtin = { path = "../../verus-hacking/verus/source/builtin" }
+vstd = { path = "../../verus-hacking/verus/source/vstd" }
 
 [package.metadata.verus]
 verify = true
+imports = ["vstd"]

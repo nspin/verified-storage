@@ -96,6 +96,18 @@ mkShell {
     pmdk
   ];
 
+  shellHook =
+    let
+      m = toString ../verus-hacking/verus/source/Cargo.toml;
+    in ''
+      t() {
+        cargo build --manifest-path ${m} \
+          -p verus-driver --features singular \
+            && cargo run  --manifest-path ${m} \
+              -p cargo-verus -- "$@"
+      }
+    '';
+
   passthru = {
     inherit pkgs z3 pmdk;
   };
