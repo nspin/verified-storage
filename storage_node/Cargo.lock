@@ -43,10 +43,12 @@ checksum = "cf4b9d6a944f767f8e5e0db018570623c85f3d925ac718db4e06d0187adb21c1"
 [[package]]
 name = "builtin"
 version = "0.1.0"
+source = "git+https://github.com/nspin/verus.git?branch=pr/cargo-integration#67bb1986e5224fcddb83e7fc86e1a406f3229647"
 
 [[package]]
 name = "builtin_macros"
 version = "0.1.0"
+source = "git+https://github.com/nspin/verus.git?branch=pr/cargo-integration#67bb1986e5224fcddb83e7fc86e1a406f3229647"
 dependencies = [
  "prettyplease_verus",
  "proc-macro2",
@@ -248,6 +250,7 @@ dependencies = [
 [[package]]
 name = "prettyplease_verus"
 version = "0.1.15"
+source = "git+https://github.com/nspin/verus.git?branch=pr/cargo-integration#67bb1986e5224fcddb83e7fc86e1a406f3229647"
 dependencies = [
  "proc-macro2",
  "syn_verus",
@@ -390,6 +393,7 @@ dependencies = [
 [[package]]
 name = "syn_verus"
 version = "1.0.95"
+source = "git+https://github.com/nspin/verus.git?branch=pr/cargo-integration#67bb1986e5224fcddb83e7fc86e1a406f3229647"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -423,6 +427,7 @@ checksum = "f962df74c8c05a667b5ee8bcf162993134c104e96440b663c8daa176dc772d8c"
 [[package]]
 name = "vstd"
 version = "0.1.0"
+source = "git+https://github.com/nspin/verus.git?branch=pr/cargo-integration#67bb1986e5224fcddb83e7fc86e1a406f3229647"
 dependencies = [
  "builtin",
  "builtin_macros",
